@@ -1,10 +1,33 @@
-class ItemsList {
+class Prodact {
+  List<ProdacutItem>? prodacutItem;
+
+  Prodact({this.prodacutItem});
+
+  Prodact.fromJson(Map<String, dynamic> json) {
+    if (json['prodacutItem'] != null) {
+      prodacutItem = <ProdacutItem>[];
+      json['prodacutItem'].forEach((v) {
+        prodacutItem!.add(new ProdacutItem.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.prodacutItem != null) {
+      data['prodacutItem'] = this.prodacutItem!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class ProdacutItem {
   String? name;
   List<Itam>? itam;
 
-  ItemsList(u,  {this.name, this.itam});
+  ProdacutItem({this.name, this.itam});
 
-  ItemsList.fromJson(Map<String, dynamic> json) {
+  ProdacutItem.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     if (json['itam'] != null) {
       itam = <Itam>[];
