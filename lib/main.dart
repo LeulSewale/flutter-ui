@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'Widget/visiblWidget.dart';
 import 'screen/home_page.dart';
-import 'screen/notification.dart';
+
 
 void main() => runApp(const MyApp());
 

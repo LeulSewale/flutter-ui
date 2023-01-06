@@ -40,6 +40,7 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
   Widget initWidget() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
         favoriteCategories(),
         visibWiget(),
         cheackStatus(),
-       _buildExpandableTile(),
+        _buildExpandableTile(),
       ],
     );
   }
@@ -89,11 +90,12 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {
             showModalBottomSheet<void>(
               context: context,
+              isScrollControlled: true,
               builder: (BuildContext context) {
                 return Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      color: const Color.fromARGB(255, 192, 188, 188)),
+                      color:  Colors.white),
                   child: Column(
                     children: [
                       Row(
@@ -109,32 +111,365 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       Column(
-                        children: const [
-                          ListTile(
-                              horizontalTitleGap: 50,
-                              
-                              title: Text(
-                                'DashBord',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
+                        children: [
+                          const Text(
+                            "Notifications",
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Card(
+                              shadowColor: Colors.black,
+                              color: Color.fromARGB(255, 236, 185, 185),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Column(children: [
+                                        Row(
+                                          children: const [
+                                            Text(
+                                              '12:12pm Tuesday, Dec6',
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: const [
+                                            Icon(Icons.dashboard),
+                                            Text(
+                                              'Item A',
+                                              style: TextStyle(
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black),
+                                            ),
+                                          ],
+                                        ),
+                                      ]),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: const [
+                                      Text(
+                                        'Temp:',
+                                        style: TextStyle(
+                                            fontSize: 13, color: Colors.red),
+                                      ),
+                                      Text(
+                                        '6.75*C',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.red),
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               )),
-                          ListTile(
-                              horizontalTitleGap: 50,
-                              title: Text(
-                                'DashBord',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Card(
+                              shadowColor: Colors.black,
+                              color: Color.fromARGB(255, 236, 185, 185),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Column(children: [
+                                        Row(
+                                          children: const [
+                                            Text(
+                                              '12:12pm Tuesday, Dec6',
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: const [
+                                            Icon(Icons.dashboard),
+                                            Text(
+                                              'Item A',
+                                              style: TextStyle(
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black),
+                                            ),
+                                          ],
+                                        ),
+                                      ]),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: const [
+                                      Text(
+                                        'Temp:',
+                                        style: TextStyle(
+                                            fontSize: 13, color: Colors.red),
+                                      ),
+                                      Text(
+                                        '6.75*C',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.red),
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               )),
-                          ListTile(
-                              horizontalTitleGap: 50,
-                              title: Text(
-                                'DashBord',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Card(
+                              shadowColor: Colors.black,
+                              color: Color.fromARGB(255, 235, 242, 207),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Column(children: [
+                                        Row(
+                                          children: const [
+                                            Text(
+                                              '12:12pm Tuesday, Dec6',
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: const [
+                                            Icon(Icons.dashboard),
+                                            Text(
+                                              'Item A',
+                                              style: TextStyle(
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black),
+                                            ),
+                                          ],
+                                        ),
+                                      ]),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: const [
+                                      Text(
+                                        'Temp:',
+                                        style: TextStyle(
+                                            fontSize: 13, color: Colors.black),
+                                      ),
+                                      Text(
+                                        '2.75*C',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black),
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               )),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Card(
+                              shadowColor: Colors.black,
+                              color: Color.fromARGB(255, 235, 242, 207),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Column(children: [
+                                        Row(
+                                          children: const [
+                                            Text(
+                                              '12:12pm Tuesday, Dec6',
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: const [
+                                            Icon(Icons.dashboard),
+                                            Text(
+                                              'Item A',
+                                              style: TextStyle(
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black),
+                                            ),
+                                          ],
+                                        ),
+                                      ]),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: const [
+                                      Text(
+                                        'Temp:',
+                                        style: TextStyle(
+                                            fontSize: 13, color: Colors.black),
+                                      ),
+                                      Text(
+                                        '2.75*C',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              )),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Card(
+                              shadowColor: Colors.black,
+                              color: Color.fromARGB(255, 214, 215, 207),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Column(children: [
+                                        Row(
+                                          children: const [
+                                            Text(
+                                              '10:12pm Tuesday, Dec6',
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: const [
+                                            Icon(Icons.dashboard),
+                                            Text(
+                                              'Item B',
+                                              style: TextStyle(
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black),
+                                            ),
+                                          ],
+                                        ),
+                                      ]),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: const [
+                                      Text(
+                                        'Temp:',
+                                        style: TextStyle(
+                                            fontSize: 13, color: Colors.black),
+                                      ),
+                                      Text(
+                                        '2.75*C',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              )),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Card(
+                              shadowColor: Colors.black,
+                              color: Color.fromARGB(255, 214, 215, 207),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Column(children: [
+                                        Row(
+                                          children: const [
+                                            Text(
+                                              '12:12pm Tuesday, Dec6',
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: const [
+                                            Icon(Icons.dashboard),
+                                            Text(
+                                              'Item A',
+                                              style: TextStyle(
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black),
+                                            ),
+                                          ],
+                                        ),
+                                      ]),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: const [
+                                      Text(
+                                        'Temp:',
+                                        style: TextStyle(
+                                            fontSize: 13, color: Colors.black),
+                                      ),
+                                      Text(
+                                        '2.75*C',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              )),
+                          const SizedBox(
+                            height: 20,
+                          ),
                         ],
                       ),
                     ],
@@ -153,7 +488,7 @@ class _HomePageState extends State<HomePage> {
                 width: 500,
                 elevation: 8.0,
                 context: context,
-              //  ignoreAppBar: false,
+                //  ignoreAppBar: false,
                 body: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
@@ -219,8 +554,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ));
           },
-          ),
-        ],
+        ),
+      ],
     );
   }
 
@@ -257,7 +592,7 @@ class _HomePageState extends State<HomePage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
-               Text(
+              Text(
                 "Favorate",
                 style: TextStyle(
                   fontSize: 30,
@@ -369,7 +704,6 @@ class _HomePageState extends State<HomePage> {
     //             : Container(),
     //       ),
     //     ));
-  
   }
 
   Widget cheackStatus() {
@@ -378,7 +712,7 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Container(
-        //  margin: const EdgeInsets.only(left: 20, top: 0),
+          //  margin: const EdgeInsets.only(left: 20, top: 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
@@ -390,7 +724,6 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                 ),
               ),
-              
             ],
           ),
         ),
@@ -400,23 +733,21 @@ class _HomePageState extends State<HomePage> {
 
   Widget _buildExpandableTile() {
     return const Card(
-      margin:  EdgeInsets.all(15),
-      // padding: const EdgeInsets.all(5),
-      // decoration: BoxDecoration(
-      //     borderRadius: BorderRadius.circular(20), color: Colors.white),
-      child: ExpansionTile(
-        title:  Text(
-          'Rotgrupp',
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-        children: <Widget>[
-          BuildExpandeds(),
-        ]
-      )
-    );
-     }}
-    
+        margin: EdgeInsets.all(15),
+        // padding: const EdgeInsets.all(5),
+        // decoration: BoxDecoration(
+        //     borderRadius: BorderRadius.circular(20), color: Colors.white),
+        child: ExpansionTile(
+            title: Text(
+              'Rotgrupp',
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+            children: <Widget>[
+              BuildExpandeds(),
+            ]));
+  }
+}
